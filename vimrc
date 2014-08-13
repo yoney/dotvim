@@ -22,3 +22,11 @@ execute pathogen#infect()
 let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
 let g:clang_complete_auto = 0 
 let g:clang_complete_copen = 1
+
+" Functions
+
+" Removes trailing spaces
+match ErrorMsg '\s\+$'
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
